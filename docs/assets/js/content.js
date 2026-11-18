@@ -22,9 +22,9 @@ window.CONTENT = {
     photo: "assets/img/IMG_4784.JPG",
     // TODO: afegir el CV quan estigui llest
     cv: {
-      ca: null,
-      es: null,
-      en: null,
+      ca: "assets/CV-Miquel-Molina-CA.pdf",
+      es: "assets/CV-Miquel-Molina-ES.pdf",
+      en: "assets/CV-Miquel-Molina-EN.pdf",
     },
   },
 
