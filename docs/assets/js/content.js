@@ -18,9 +18,7 @@ window.CONTENT = {
     linkedin: "https://www.linkedin.com/in/miquel-molina-pedrero-b38588312/",
     github: "https://github.com/miquel-molina",
     linkedinLabel: "linkedin.com/in/miquel-molina-pedrero",
-    // TODO: quan tinguis la foto, desa-la a assets/img/ (p.ex. miquel.jpg) i posa aquí la ruta
-    photo: "assets/img/IMG_4784.JPG",
-    // TODO: afegir el CV quan estigui llest
+    photo: "assets/img/miquel.jpg",
     cv: {
       ca: "assets/CV-Miquel-Molina-CA.pdf",
       es: "assets/CV-Miquel-Molina-ES.pdf",
@@ -53,7 +51,7 @@ window.CONTENT = {
       { value: 2, suffix: "", label: { ca: "cursos d'ASIX", es: "cursos de ASIX", en: "ASIX school years" } },
     ],
     // Cinta de tecnologies — els noms han d'existir a LOGOS de main.js
-    mainStack: ["Linux", "Kubernetes", "AWS", "PostgreSQL", "Cisco", "Windows", "Git", "Jira"],
+    mainStack: ["Linux", "Kubernetes", "AWS", "Docker", "PostgreSQL", "Cisco", "VirtualBox", "Windows", "Git", "Jira"],
   },
 
   /* ---------- Sobre mi ---------- */
@@ -70,6 +68,12 @@ window.CONTENT = {
         en: "I enjoy networking, virtualisation, and cloud environments. I'm now starting to work with Kubernetes and AWS at the company, and I want to keep learning.",
       },
     ],
+    // Tercer paràgraf: més personal (surt al CV)
+    extra: {
+      ca: "Fora de l'ordinador, practico l'hoquei patins des dels 3 anys al Club Patí Sant Celoni, on soc jugador del primer equip (Nacional Catalana). També m'agrada sortir a córrer i anar amb bici.",
+      es: "Fuera del ordenador, practico el hockey patines desde los 3 años en el Club Patí Sant Celoni, donde soy jugador del primer equipo (Nacional Catalana). También me gusta correr e ir en bici.",
+      en: "Away from the computer, I've played roller hockey since I was 3 at Club Patí Sant Celoni, where I play for the first team (Catalan National league). I also enjoy running and cycling.",
+    },
     highlights: [
       {
         icon: "server",
@@ -113,8 +117,8 @@ window.CONTENT = {
     ],
     facts: [
       { icon: "pin", text: { ca: "Barcelona", es: "Barcelona", en: "Barcelona" } },
-      { icon: "globe", text: { ca: "Català · Castellà", es: "Catalán · Castellano", en: "Catalan · Spanish" } },
-      { icon: "cap", text: { ca: "CFGS ASIX (en curs)", es: "CFGS ASIX (en curso)", en: "CFGS ASIX (in progress)" } },
+      { icon: "globe", text: { ca: "Català i castellà (natius) · Anglès B2", es: "Catalán y castellano (nativos) · Inglés B2", en: "Catalan and Spanish (native) · English B2" } },
+      { icon: "cap", text: { ca: "CFGS ASIX · 2n curs", es: "CFGS ASIX · 2.º curso", en: "CFGS ASIX · 2nd year" } },
     ],
   },
 
@@ -278,11 +282,13 @@ window.CONTENT = {
 
   /* ---------- Stack tecnològic ---------- */
   stack: [
-    { code: "SYS", group: { ca: "Sistemes operatius", es: "Sistemas operativos", en: "Operating systems" }, items: ["Linux", "Windows"] },
+    { code: "SYS", group: { ca: "Sistemes operatius", es: "Sistemas operativos", en: "Operating systems" }, items: ["Linux", "Windows", "Windows Server"] },
     { code: "NET", group: { ca: "Xarxes", es: "Redes", en: "Networking" }, items: ["Cisco"] },
-    { code: "CLD", group: { ca: "Núvol i contenidors", es: "Nube y contenedores", en: "Cloud & containers" }, items: ["AWS", "Kubernetes"] },
+    { code: "VRT", group: { ca: "Virtualització", es: "Virtualización", en: "Virtualisation" }, items: ["VirtualBox", "Docker"] },
+    { code: "CLD", group: { ca: "Núvol", es: "Nube", en: "Cloud" }, items: ["AWS", "Kubernetes"] },
     { code: "DB", group: { ca: "Bases de dades", es: "Bases de datos", en: "Databases" }, items: ["PostgreSQL"] },
     { code: "SUP", group: { ca: "Suport i eines", es: "Soporte y herramientas", en: "Support & tools" }, items: ["Jira", "Zoho", "Git"] },
+    { code: "CAD", group: { ca: "Disseny tècnic", es: "Diseño técnico", en: "Technical design" }, items: ["AutoCAD", "Fusion 360"] },
   ],
 
   /* ---------- Formació ---------- */

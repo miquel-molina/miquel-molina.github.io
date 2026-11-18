@@ -46,7 +46,7 @@
   var DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/";
   var LOGOS = {
     "linux": "linux/linux-original", "kubernetes": "kubernetes/kubernetes-original",
-    "postgresql": "postgresql/postgresql-original", "git": "git/git-original", "jira": "jira/jira-original",
+    "postgresql": "postgresql/postgresql-original", "git": "git/git-original", "jira": "jira/jira-original", "docker": "docker/docker-original",
   };
   var TICKET = '<path d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2.5a2.5 2.5 0 0 0 0 5V17a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2.5a2.5 2.5 0 0 0 0-5z"/><path d="m9.5 12 2 2 3.5-3.5"/>';
   var TECH_ICONS = {
@@ -54,6 +54,10 @@
     "cisco": '<rect x="3" y="12" width="18" height="7" rx="2"/><path d="M7 15.5h.01M11 15.5h.01M7 12V8M12 12V5M17 12V8"/>',
     "windows": '<path d="M3 5.6 10.8 4.5v7H3zM12.8 4.2 21 3v8.5h-8.2zM3 13h7.8v7.5L3 19.4zM12.8 13H21v8l-8.2-1.2z"/>',
     "zoho": TICKET,
+    "windows server": '<rect x="4" y="3" width="16" height="7" rx="2"/><rect x="4" y="14" width="16" height="7" rx="2"/><path d="M8 6.5h.01M8 17.5h.01M12 10v4"/>',
+    "virtualbox": '<path d="M12 3 4 7.5v9L12 21l8-4.5v-9z"/><path d="M4 7.5 12 12l8-4.5M12 12v9"/>',
+    "autocad": '<path d="M4 20h16M6 20V9l6-5 6 5v11"/><path d="M10 20v-5h4v5"/>',
+    "fusion": '<path d="M12 3 4 7.5v9L12 21l8-4.5v-9z"/><path d="M12 8.5 8 11v4l4 2.5 4-2.5v-4z"/>',
   };
   function logo(name) {
     var key = String(name).toLowerCase().replace(/\s+\d+$/, "");
@@ -164,7 +168,8 @@
     var a = C.about;
     $("about").innerHTML = '<div class="container">' + head("about") +
       '<div class="about-grid">' +
-        '<div class="about-text reveal">' + a.paragraphs.map(function (x) { return "<p>" + tx(x) + "</p>"; }).join("") +
+        '<div class="about-text reveal">' + a.paragraphs.concat(a.extra ? [a.extra] : []).map(function (x) { return "<p>" + tx(x) + "</p>"; }).join("") +
+          '<ul class="about-facts">' + (a.facts || []).map(function (f) { return "<li>" + (ICON[f.icon] || "") + "<span>" + tx(f.text) + "</span></li>"; }).join("") + "</ul>" +
           '<dl class="stats about-stats reveal">' + (C.hero.stats || []).map(function (st) {
             return '<div><dt>' + tx(st.label) + '</dt><dd><span class="count" data-to="' + st.value + '">' + (REDUCED ? st.value : 0) + "</span>" + esc(st.suffix || "") + "</dd></div>";
           }).join("") + "</dl>" +

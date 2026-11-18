@@ -182,6 +182,9 @@ svg { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; s
 .about-text p + p { margin-top: 16px; }
 .about-text p:first-child { color: var(--ink); font-size: clamp(1.3rem, 2.2vw, 1.6rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.4; }
 .about-text p + p { font-size: 1.08rem; line-height: 1.7; max-width: 52ch; }
+.about-facts { display: grid; gap: 10px; margin-top: 26px; }
+.about-facts li { display: flex; align-items: center; gap: 12px; font-size: .95rem; font-weight: 600; color: var(--ink); }
+.about-facts svg { flex: none; width: 34px; height: 34px; padding: 8px; box-sizing: border-box; border-radius: 10px; background: var(--primary-soft); color: var(--primary); fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .about-stats { display: flex; gap: 40px; margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--line); }
 .about-stats div { display: flex; flex-direction: column; }
 .about-stats dd { order: -1; font-size: 2.4rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1; color: var(--ink); font-variant-numeric: tabular-nums; }
