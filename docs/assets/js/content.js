@@ -19,7 +19,7 @@ window.CONTENT = {
     github: "https://github.com/miquel-molina",
     linkedinLabel: "linkedin.com/in/miquel-molina-pedrero",
     // TODO: quan tinguis la foto, desa-la a assets/img/ (p.ex. miquel.jpg) i posa aquí la ruta
-    photo: "assets/img/miquel.jpg",
+    photo: "assets/img/IMG_4784.JPG",
     // TODO: afegir el CV quan estigui llest
     cv: {
       ca: null,
